@@ -1,0 +1,326 @@
+{
+    "info": {
+        "name": "Laravel Province City District API",
+        "_postman_id": "e1234567-89ab-cdef-0123-456789abcdef",
+        "description": "API Collection for Province, City, District",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Province",
+            "item": [
+                {
+                    "name": "Get All Provinces",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/province",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "province"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Province",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"province_name\": \"Nusa Tenggara Barat\",\n  \"province_code\": \"NTB\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/province",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "province"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Show Province",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/province/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "province",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Province",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"province_name\": \"Jawa Barat\",\n  \"province_code\": \"JBR\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/province/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "province",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Province",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{baseUrl}}/province/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "province",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "City",
+            "item": [
+                {
+                    "name": "Get All Cities",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/city",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "city"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create City",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"city_name\": \"Mataram\",\n  \"city_code\": \"MTR\",\n  \"province_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/city",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "city"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Show City",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/city/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "city",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update City",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"city_name\": \"Lombok Tengah\",\n  \"city_code\": \"LBT\",\n  \"province_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/city/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "city",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete City",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{baseUrl}}/city/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "city",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "District",
+            "item": [
+                {
+                    "name": "Get All Districts",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/district",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "district"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create District",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"district_name\": \"Cakranegara\",\n  \"district_code\": \"CKR\",\n  \"city_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/district",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "district"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Show District",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "{{baseUrl}}/district/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "district",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update District",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"district_name\": \"Praya\",\n  \"district_code\": \"PRY\",\n  \"city_id\": 2\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/district/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "district",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete District",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "{{baseUrl}}/district/1",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "district",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://127.0.0.1:8000/api"
+        }
+    ]
+}
