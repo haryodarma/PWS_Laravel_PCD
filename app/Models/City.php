@@ -14,6 +14,7 @@ class City extends Model
     {
         return $this->belongsTo(Province::class, 'province_id', 'province_id');
     }
+
     public function districts()
     {
         return $this->hasMany(District::class, 'city_id', 'city_id');

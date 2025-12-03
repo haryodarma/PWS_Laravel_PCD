@@ -34,8 +34,6 @@ class ProvinceController extends Controller
      */
     public function store(Request $request)
     {
-
-
         try {
 
             $validator = $request->validate([
@@ -61,11 +59,7 @@ class ProvinceController extends Controller
      */
     public function show(Province $province)
     {
-        try {
-            return ResponseFormat::success(200, "Province details", $province);
-        } catch (\Exception $e) {
-            return ResponseFormat::serverError();
-        }
+        return ResponseFormat::success(200, "Province details", $province);
     }
 
     /**
@@ -108,7 +102,7 @@ class ProvinceController extends Controller
         try {
 
             $province->delete();
-            return ResponseFormat::success(200, "Province deleted successfully");
+            return response()->json(["message" => "Province deleted successfully"]);
         } catch (\Exception $e) {
             return ResponseFormat::serverError();
         }

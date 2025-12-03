@@ -95,7 +95,7 @@ class DistrictController extends Controller
     {
         try {
             $district->delete();
-            return ResponseFormat::success(200, "District deleted successfully");
+            return response()->json(["message" => "District deleted successfully"]);
         } catch (\Exception $e) {
             return ResponseFormat::serverError();
         }

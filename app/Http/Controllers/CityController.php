@@ -97,7 +97,7 @@ class CityController extends Controller
     {
         try {
             $city->delete();
-            return ResponseFormat::success(200, "City deleted successfully");
+            return response()->json(["message" => "City deleted successfully"]);
         } catch (\Exception $e) {
             return ResponseFormat::serverError();
         }

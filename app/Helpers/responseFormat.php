@@ -43,4 +43,12 @@ class ResponseFormat
         ];
         return response()->json($res);
     }
+    public static function unauthorized($message)
+    {
+        $res = [
+            'status' => 401,
+            'message' => $message,
+        ];
+        return response()->json($res);
+    }
 }
